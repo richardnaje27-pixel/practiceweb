@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.8s ease;
+}
+
+/* Smooth fade-in animation */
+.container, #weather {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Weather box animation */
+#weather {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+
+  transition: transform 0.3s ease;
+}
+
+#weather:hover {
+  transform: scale(1.05);
+}
+
+/* Button animation */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #555;
+  transform: scale(1.1);
+}
+
+/* Input animation */
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+
+  transition: 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.05);
+  outline: none;
+}
